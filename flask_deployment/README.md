@@ -15,6 +15,8 @@ pod-name.headless-service-name.my-namespace.svc.cluster.local
 This demo uses a simple flask web app
 
 ```
+use namespace flag (-n) if using namespace in every command
+
 kubectl run -i --tty --image busybox:1.28 dns-test --restart=Never --rm
 nslookup flask-normal
 nslookup flask-headless
