@@ -17,6 +17,8 @@ pod-name.headless-service-name.my-namespace.svc.cluster.local
 This demo uses a simple nginx webserver
 
 ```
+use namespace flag (-n) if using namespace in every command
+
 kubectl apply -f web.yaml
 kubectl get pods -l app=nginx
 kubectl get service nginx-headless nginx-normal
