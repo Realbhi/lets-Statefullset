@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment 
 metadata: 
   name: flask
+  namespace: namespace-1
   labels: 
     app: flask
 spec: 
@@ -24,6 +25,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: flask-normal
+  namespace: namespace-1
 spec:
   ports:
   - name: http
@@ -37,6 +39,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: flask-headless
+  namespace: namespace-1
 spec:
   clusterIP: None
   ports:
