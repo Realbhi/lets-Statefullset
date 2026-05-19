@@ -168,3 +168,10 @@ Path to values.yaml : https://github.com/Realbhi/lets-Statefullset/blob/main/pyt
    
 - mysql binary is invoked in the script itself, as its a mysql client we need to provide db name , username and password as well so connect to mysql server. Hostname is not provided as mysql client and server are in same host
 - With provided info it will connect to sql server and then execute the the init script that is sql query after -e "..." . This creates the needed tables and databases.
+
+##
+
+### Final conclusion :
+
+- In second case discussed ,  frontend application is reaching the mysql server and fetching data to render on frontend. The ways to start the database and run the inti script is different.
+- the fronend just needs URI to reach database through driver and then the frontend logic fetches and reder the fetched.
