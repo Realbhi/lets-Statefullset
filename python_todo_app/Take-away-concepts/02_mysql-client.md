@@ -108,5 +108,27 @@ Client:
 
 ---
 
+### IMPORTANT 
+
+Mysql client always needs following to connect to mysql server:
+- Hostname ( -h )  
+- username ( -u )
+- password ( -p )
+- port
+- DatabaseName
+
+
+**Inside the MySQL container itself during initialization, sometimes you may see commands like:**
+~~~
+mysql -uroot -p"$MYSQL_ROOT_PASSWORD"
+~~~
+
+without -h.
+
+Why?
+
+- Because by default mysql client tries: localhost
+- if no host is provided. So if:
+- mysql client and mysql server are inside same container, hostname may not be needed.
 
 
